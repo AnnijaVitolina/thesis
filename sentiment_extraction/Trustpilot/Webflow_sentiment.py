@@ -34,17 +34,11 @@ for index, row in df.iterrows():
     data_dict['Neutral'].append(sentiment['SentimentScore']['Neutral'])
     data_dict['Positive'].append(sentiment['SentimentScore']['Positive'])
 
-    # Convert the JSON data to a Pandas DataFrame
-    #df1 = pd.DataFrame.from_dict(comprehend.detect_sentiment(Text=DetectSentimenttext, LanguageCode='en'), sort_keys=True, indent=4)
-
-    # Write the DataFrame to an Excel file
-    #df1.to_excel("/Users/annijavitolina/Desktop/uni/bachelor/Scraped/Trustpilot/json.xlsx", index=False)
-
+    
 # Create a dataframe
 df1 = pd.DataFrame.from_dict(data_dict)
 
 # Export to Excel
 df1.to_excel('/Users/annijavitolina/Desktop/uni/bachelor/Scraped/Trustpilot/Webflow/Webflow_sentiment.xlsx')
-#out_file.write(large_json) 
-#out_file.write(json.dumps(all_jsns))
+
 
